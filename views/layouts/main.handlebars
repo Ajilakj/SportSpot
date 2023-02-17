@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportSpot</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+
+<body>
+  <header>
+    <h1>SportSpot<img src="../images/sportspot.png" alt="logo" id="logo"></h1>
+  </header>
+  <nav class="navbar">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm">
+              <!-- home/feed icon-->
+              <a href="/home"  id="nav-link">Home</a>
+            </div>
+
+            <div class="col-sm">
+              <!-- create post icon-->
+              <a href="/post/create"  id="nav-link">Post</a>
+            </div>
+
+            <div class="col-sm">
+              <!-- edit profile icon-->
+              <a href="/api/profile/edit"  id="nav-link">Edit Profile</a>
+            </div>
+            <div class="col-sm">
+              <!-- profile icon if loggedin, login link if not-->
+              {{!-- {{#if loggedIn}} --}}
+              {{!-- <a href="/profile" id="nav-link">Profile</a> --}}
+              {{!-- {{else}}
+              <a href="/login" id="nav-link">Login</a>
+              {{/if}} --}}
+            </div>
+
+            <div class="col-sm">
+              <!-- logout icon-->
+              <a href="/api/users/logout"  id="nav-link">Logout</a>
+            </div>
+
+          </div>
+        </div>
+    </nav>
+  <main>
+  {{{body}}}
+  </main>
+
+</body>
+
+</html>
