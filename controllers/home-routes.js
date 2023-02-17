@@ -25,14 +25,6 @@ router.get("/home", async (req, res) => {
   });
 });
 
-// By Ajila to check the create user handlebars
-// router.get("/create-user", async (req, res) => {
-//   try {
-//     res.render("signup");
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 // CREATE new user
 // router.post("/create-user", async (req, res) => {
