@@ -15,7 +15,7 @@ const createBlogPostFormHandler = async (event) => {
     const result = await response.json();
     // if (response.ok){
     if (result){
-      location.href= `/sport/${sports_id}`;
+      location.href= `api/sport/${sports_id}`;
     } else {
       alert("An error has occurred in generating your post");
     }
