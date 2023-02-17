@@ -1,0 +1,392 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/* App Header and Nav Bar */
+header {
+    background-color:#42594e;
+    height: 100px;
+}
+
+h1 {
+    color: white;
+    font-size: 35px;
+    padding: 15px;
+    transition: 500ms ease-in-out;
+}
+
+nav {
+    background-color:#42594e;
+    white-space: nowrap;
+}
+
+#logo {
+    width: 80px;
+    float: right;
+}
+
+#nav-link {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px;
+}
+
+#nav-link:hover {
+    color: #87BBA2;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+/* Log In Form */
+
+.login-card {
+    margin-top: 100px;
+    padding: 150px 150px 250px 150px;
+    background-color: #8ab5a06c;
+}
+
+.login-card:hover, .login-card:active {
+    background-color:  #6f9f8885;
+    transition: .5s;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.login-card div {
+    margin: 20px;
+}
+
+.login-card input {
+    margin-left: 20px;
+}
+
+.login-card button {
+    margin-top: 30px;
+    padding: 3px 15px 3px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e4faef;
+    color: #42594e;
+    font-weight: 300;
+}
+
+.login-card button:hover {
+    background-color: #618775;
+    color: white;
+    transition: .3s;
+}
+
+
+/* Sign Up Form */
+.signup-card {
+    margin-top: 100px;
+    padding: 150px 150px 250px 150px;
+    background-color: #6f9f8885;
+}
+
+.signup-card h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.signup-form div {
+    margin: 20px;
+}
+
+.signup-form input {
+    margin-left: 20px;
+}
+
+.signup-form button {
+    margin-top: 30px;
+    padding: 3px 15px 3px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e4faef;
+    color: #42594e;
+    font-weight: 300;
+}
+
+.signup-form button:hover {
+    background-color: #618775;
+    color: white;
+    transition: .3s;
+}
+
+
+/* Home Page - Sports Cards */
+.sports {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sport-card {
+    margin: 20px;
+    padding: 0px;
+    border: none;
+}
+
+.sport-card .card-title {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    margin: 15px;
+}
+
+.form-row{
+    display: flex;
+}
+
+.form-column{
+    width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    .sport-card .card-title {
+        font-size: 18px;
+    }
+}
+
+.sport-card:hover {
+    scale: 101%;
+    transition: .5s;
+}
+
+.sport-card img {
+    padding: 0px;
+}
+
+.card-img-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.31);
+    transition: .3s;
+}
+
+
+/* Sport Posts */
+
+.sport-name {
+    margin: 50px;
+}
+
+.sport-name h1 {
+    color: black;
+    font-weight: 200;
+    font-size: 50pt;
+}
+
+.posts {
+    margin: 50px;
+}
+
+.post-card {
+    margin: 45px;
+    padding: 21px;
+}
+
+#post-title, #post-date, #content{
+    color: #42594e;
+}
+
+#content {
+    font-size: 12pt;
+}
+
+.post-card a:hover {
+    text-decoration: none;
+    scale: 100.8%;
+    opacity: .8;
+    transition: .3s;
+}
+
+
+
+/* Single Post & Comments */
+
+.post-details {
+    margin: 45px;
+    color: #42594e;
+}
+
+.post-details h3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#comments-sec {
+        color: #42594e;
+}
+
+.comment-section {
+    margin: 45px;
+    color: #42594e;
+}
+
+.existing-comments {
+    margin: 45px;
+    margin-top: 60px;
+    color: #618775;
+}
+
+#comment-user {
+    margin: 20px;
+    font-size: 14pt;
+}
+
+#comment-time {
+    margin: 20px;
+    font-size: 13pt;
+}
+
+.comment-card p {
+    margin: 20px;
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+.comment-section button {
+    margin-top: 30px;
+    padding: 3px 15px 3px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e4faef;
+    color: #42594e;
+    font-weight: 300;
+}
+
+.comment-form input{
+    margin-top: 10px;
+    display: block;
+}
+
+.comment-section button:hover {
+    background-color: #618775;
+    color: white;
+    transition: .3s;
+}
+
+
+/* Creating a Post */
+
+.create-post {
+    margin: 30px;
+    color: black;
+    font-weight: 200;
+    font-size: 40pt;
+}
+
+.post-form {
+    margin: 50px;
+}
+
+.post-form div {
+    padding: 10px;
+}
+
+.choice-prompt {
+    font-size: 30pt;
+}
+
+#blog-title {
+    display: block;
+    font-size: 18pt;
+}
+
+#post-title {
+    margin-bottom: 10px;
+}
+
+#blog-post {
+    display: block;
+    font-size: 13pt;
+}
+
+#post-content {
+    margin-bottom: 35pt;
+}
+
+#prompt {
+    font-size: 15pt;
+}
+
+#selectsport {
+    margin-bottom: 45pt;
+}
+
+#add-blog-post-btn {
+    margin-top: 50px;
+    padding: 3px 15px 3px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #cbebda;
+    color: #42594e;
+    font-weight: 300;
+    font-size: 12pt;
+}
+
+#add-blog-post-btn:hover {
+    background-color: #78a28e;
+    color: white;
+    transition: .3s;
+} 
+
+/* Profile Page */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-username {
+    margin: 75px;
+    font-size: 45pt;
+    font-weight: 100;
+}
+
+#profile-details {
+    text-align: center;
+}
+
+#profile-details h4 {
+    margin: 10px;
+    font-size: 21pt;
+    color:#618775;
+}
+
+#profile-name {
+    margin-top: 35px;
+    font-size: 18pt;
+}
+
+#profile-bio {
+    margin: 15px;
+}
+
+#profile-contact {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#profile-contact h4 {
+    margin: 10px;
+    font-size: 21pt;
+    color:#618775;
+}
+
+#profile-email {
+    margin-top: 35px;
+    text-align: left;
+}
+
+#profile-phone {
+    text-align: left;
+}
