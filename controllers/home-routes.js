@@ -26,34 +26,7 @@ router.get("/home", async (req, res) => {
 });
 
 
-// CREATE new user
-// router.post("/create-user", async (req, res) => {
-//   try {
-//     const dbUserData = await User.create({
-//       username: req.body.username,
-//       password: req.body.password,
-//       email: req.body.email,
-//       firstName: req.body.firstName,
-//       lastName: req.body.lastName,
-//       phone: req.body.phone,
-//     });
 
-//     req.session.save(() => {
-//       res.status(200).json(dbUserData);
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-// //added this code below to associate a user with any blog post they create
-// router.get("/post/create", async (req, res) => {
-//   const postsData = await Post.findAll({
-//     include: [User]
-//   });
-//   const posts = postsData.map(post => post.get({plain:true}));
-//   res.render("create-post",{loggedIn: req.session.loggedIn, posts});
-// });
 
 
 // GET Login route

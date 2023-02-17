@@ -4,7 +4,7 @@ const profileBio = document.querySelector("profile-bio");
 const profileEmail = document.querySelector("profile-email");
 const profilePhone = document.querySelector("profile-phone");
 
-const response = await fetch (`/users/profile`, {
+const response = await fetch (`/api/profile`, {
     moethod: "GET",
     body: JSON.stringify({
         username,
@@ -19,7 +19,7 @@ const response = await fetch (`/users/profile`, {
     },
 });
 if (response.ok) {
-    document.location.replace("/users/profile");
+    document.location.replace("/api/profile");
 } else {
     alert("Failed to load profile");
 }
