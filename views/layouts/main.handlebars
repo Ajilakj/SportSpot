@@ -24,7 +24,7 @@
 
             <div class="col-sm">
               <!-- create post icon-->
-              <a href="/api/post/create"  id="nav-link">Post</a>
+              <a href="/post/create"  id="nav-link">Post</a>
             </div>
 
             <div class="col-sm">
@@ -33,16 +33,16 @@
             </div>
             <div class="col-sm">
               <!-- profile icon if loggedin, login link if not-->
-              {{!-- {{#if loggedIn}} --}}
+              {{#if loggedIn}}
               {{!-- <a href="/profile" id="nav-link">Profile</a> --}}
-              {{!-- {{else}}--}}
+              {{else}}
               <a href="/login" id="nav-link">Login</a>
-              {{!-- {{/if}}  --}}
+              {{/if}}
             </div>
 
             <div class="col-sm">
               <!-- logout icon-->
-              <a href="/api/users/logout"  id="nav-link">Logout</a>
+              <a href="/logout"  id="nav-link">Logout</a>
             </div>
 
           </div>

@@ -1,30 +1,23 @@
 const router = require("express").Router();
-
 const { User } = require("../../models");
 
-router.get("/", async (req, res) => {
-  try {
-    res.render("signup");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
+// route is /users
 
 // CREATE new user
+// sign up
 router.post("/", async (req, res) => {
   try {
-    const dbUserData = await User.create({
+    const userData = await User.create({
       username: req.body.username,
-      password: req.body.password,
       email: req.body.email,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      phone: req.body.phone,
+      password: req.body.password,
     });
 
     req.session.save(() => {
-      res.status(200).json(dbUserData);
+      req.session.userId=userData.id;
+      req.session.loggedIn = true;
+
+      res.status(200).json(userData);
     });
   } catch (err) {
     console.log(err);
@@ -32,14 +25,15 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:username", async (req, res) => {
-  const userData = await User.findAll({where:
-          {username:req.params.username}});
-  const user = userData.map((name) =>
-    name.get({ plain: true }));
-  res.render("profile", {
-    user
-  });
-});
+// Logout
+// router.get("/logout", (req, res) => {
+//   if (req.session.loggedIn) {
+//     req.session.destroy(() => {
+//       res.status(204).redirect("/");
+//     });
+//   } else {
+//     res.status(404).end();
+//   }
+// });
 
 module.exports = router;
